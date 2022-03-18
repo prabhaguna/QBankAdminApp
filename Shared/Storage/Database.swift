@@ -42,10 +42,12 @@ class Database : StorageAdapter {
     }
     
     
-    func loadItems<Item : DatabaseItem>(ofType ItemType : Item.Type, completion: @escaping ([Item]) -> ()) {
+    func loadItems<Item : DatabaseItem>(ofType ItemType : Item.Type,
+                                        completion: @escaping ([Item]) -> (),
+                                        condition : String? = nil) {
             
         let query = MySQLQueryRequestFactory.select(ItemType.getTablename().rawValue,
-                                                    condition: nil)
+                                                    condition: condition)
             let response = ((try? MySQLContainer.shared.mainQueryContext?.executeQueryRequestAndFetchResult(query)) as [[String : Any]]??)
             guard let responseObject = response as? [[String : Any]] else {
                 completion([])

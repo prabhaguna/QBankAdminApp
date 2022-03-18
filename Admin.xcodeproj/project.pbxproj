@@ -24,6 +24,7 @@
 		CB3BE42B27DDFAD800FAEFFC /* CategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3BE42A27DDFAD800FAEFFC /* CategoriesViewModel.swift */; };
 		CB3BE42E27DDFB3400FAEFFC /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3BE42D27DDFB3400FAEFFC /* ContainerView.swift */; };
 		CB3BE43027DDFB4500FAEFFC /* ContainerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3BE42F27DDFB4500FAEFFC /* ContainerViewModel.swift */; };
+		CB756A0927E41C55007FF37D /* SubCategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB756A0827E41C55007FF37D /* SubCategoriesViewModel.swift */; };
 		CBA9ED7427E178D2001A6905 /* QBankViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA9ED7327E178D2001A6905 /* QBankViewModel.swift */; };
 		CBA9ED7527E17A50001A6905 /* QBankViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA9ED7327E178D2001A6905 /* QBankViewModel.swift */; };
 		EE8C1929C686BF240860065D /* Pods_Admin__macOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E07EF60B1606201D8FB85E7E /* Pods_Admin__macOS_.framework */; };
@@ -49,6 +50,7 @@
 		CB3BE42A27DDFAD800FAEFFC /* CategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewModel.swift; sourceTree = "<group>"; };
 		CB3BE42D27DDFB3400FAEFFC /* ContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
 		CB3BE42F27DDFB4500FAEFFC /* ContainerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewModel.swift; sourceTree = "<group>"; };
+		CB756A0827E41C55007FF37D /* SubCategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubCategoriesViewModel.swift; sourceTree = "<group>"; };
 		CBA9ED7327E178D2001A6905 /* QBankViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QBankViewModel.swift; sourceTree = "<group>"; };
 		E07EF60B1606201D8FB85E7E /* Pods_Admin__macOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Admin__macOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0C09EED9F64AC63E09A8FA1 /* Pods-Admin (iOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Admin (iOS).release.xcconfig"; path = "Target Support Files/Pods-Admin (iOS)/Pods-Admin (iOS).release.xcconfig"; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				CB3BE42627DDFAA000FAEFFC /* SubCategoriesView.swift */,
+				CB756A0827E41C55007FF37D /* SubCategoriesViewModel.swift */,
 			);
 			path = SubCategories;
 			sourceTree = "<group>";
@@ -403,6 +406,7 @@
 				CB3BE42927DDFAB700FAEFFC /* CategoriesView.swift in Sources */,
 				CB3BE42E27DDFB3400FAEFFC /* ContainerView.swift in Sources */,
 				CB3BE41827DD93F400FAEFFC /* SubCategories.swift in Sources */,
+				CB756A0927E41C55007FF37D /* SubCategoriesViewModel.swift in Sources */,
 				CB3BE42B27DDFAD800FAEFFC /* CategoriesViewModel.swift in Sources */,
 				CBA9ED7527E17A50001A6905 /* QBankViewModel.swift in Sources */,
 				CB3BE40227DC452500FAEFFC /* AdminApp.swift in Sources */,

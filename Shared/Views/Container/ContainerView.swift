@@ -16,7 +16,7 @@ struct ContainerView: View {
                           systemImage: "list.dash")
                 }
 
-            SubCategoriesView()
+            SubCategoriesView(viewModel: SubCategoriesViewModel())
                 .tabItem {
                     Label("SubCategory", systemImage: "square.and.pencil")
                 }

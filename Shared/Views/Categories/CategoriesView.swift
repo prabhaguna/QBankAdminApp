@@ -40,6 +40,8 @@ struct CategoriesView: View {
             }.frame(height: 100,
                     alignment: .top)
             
+            Spacer()
+            Text("Saved Categories").bold()
             if let categories = viewModel.items  {
                 List(categories) { category in
                     Button(category.name ?? "", action: {

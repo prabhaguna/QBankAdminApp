@@ -14,6 +14,10 @@ final class SubCategories : NSObject, QBankModel, MySQLMappingProtocol {
     @objc var categoryId: NSNumber?
     @objc var date: Date?
     
+    enum Keys : String {
+        case id, name, categoryId, date
+    }
+    
     func mappingDictionary() -> [AnyHashable : Any]! {
         return ["id": "id",
                 "name": "name",

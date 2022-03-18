@@ -19,23 +19,26 @@ protocol QBankModel : Identifiable {
 extension QBankModel {
 
     typealias Items = ([Self]?) -> ()
+    typealias ActionCompletion = () -> ()
    
-    static func create(values: [String : Any] , completion: @escaping  Items) {
-       let insertVal : [String : Any] = values
+    static func create(values: [String : Any] ,
+                       completion: @escaping  ActionCompletion) {
+       
+        let insertVal : [String : Any] = values
         Database.shared.insert(insertType: Self.self,
                                value: insertVal,
                                completion: {
-            Self.fetch(completion: completion)
+            completion()
         })
     }
     
-    static func fetch(completion : @escaping Items) {
+    static func fetch(completion : @escaping Items, condition : String? = nil) {
         Database.shared.loadItems(ofType: Self.self , completion: { items in
             completion(items)
-        })
+        }, condition: condition)
     }
        
-    func update(values: [String : Any], completion : @escaping  Items) {
+    func update(values: [String : Any], completion : @escaping  ActionCompletion) {
         
         if let id = id {
            let updateVal : [String : Any] = values
@@ -43,17 +46,17 @@ extension QBankModel {
                                    value: updateVal,
                                    condition: "id=\(id)",
                                    completion: {
-               Self.fetch(completion: completion)
-            })
+               completion()
+           })
         }
     }
 
-    func delete(completion : @escaping  Items) {
+    func delete(completion : @escaping  ActionCompletion) {
         if  let id = id {
             Database.shared.delete(ofType: type(of: self),
                                    condition: "id=\(id)",
                                    completion: {  
-                Self.fetch(completion: completion)
+                completion()
             })
         }
     }

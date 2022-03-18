@@ -33,21 +33,21 @@ class CategoriesViewModel : ObservableObject {
         if let editVal = editVal {
             if let selectedCategory = selectedCategory {
                 selectedCategory.update(values: [Categories.Keys.name.rawValue : editVal],
-                                    completion: {items in
-                    self.items = items
+                                        completion: { [weak self] in
+                    self?.fetchCategory()
                 })
             } else {
                 Categories.create(values: [Categories.Keys.name.rawValue : editVal],
-                              completion: {items in
-                    self.items = items
+                              completion: { [weak self] in
+                    self?.fetchCategory()
                 })
             }
          }
     }
     
     func deleteCategory() {
-        selectedCategory?.delete(completion: { items in
-            self.items = items
+        selectedCategory?.delete(completion: { [weak self] in
+            self?.fetchCategory()
         })
     }
     
@@ -107,6 +107,7 @@ extension CategoriesViewModel {
     
     func resetEditView() {
         self.selectedCategory = nil
+        editVal = ""
     }
     
 }
